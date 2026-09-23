@@ -40,12 +40,13 @@ docker compose up app-dev --watch
 
 # Or start normally without watch
 docker compose up app-dev
-
-# Access the application
-# Frontend: http://localhost:5173 (Vite dev server)
-# API: http://localhost:3000 (Express server)
-# Health Check: http://localhost:3000/health
 ```
+
+### Access the Application
+
+- **Backend Health Check**: Go to: [http://localhost:3000/health](http://localhost:3000/health). This should return a success message proving the Express server is up.
+- **Database API Test**: Go to: [http://localhost:3000/api/todos](http://localhost:3000/api/todos). This should return an empty array `[]` (or some data if you added it), proving that the server is successfully talking to the PostgreSQL database.
+- **The Actual Application (Frontend)**: Go to: [http://localhost:5173](http://localhost:5173). This is where the React frontend lives. It will load the UI and automatically make requests to the backend API for you.
 
 ### Production & Testing
 
